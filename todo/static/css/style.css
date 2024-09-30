@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.container{
+    background-color: #0f1f37;
+    width: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    color: #fff;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container{
+    background-color:#ffffff30;
+    max-height: 80vh;
+    width: 60vh;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.heading{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  b{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .inp{
+    /* margin-top: 10px; */
+    margin: 5px;
+     height: 8vh;
+     width: 50vh;
+     border-radius: 10px;
+     border: none;
+     padding-left: 20px;
+     font-size: 16px;
+     font-weight: 500;
+     color: #ffffff;
+     background-color: #ffffff30;
+     border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .inp::placeholder{
+    color: #ffffffa5;
+    
+ }
+
+ .submit-btn{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 8vh;
+    width: 50vh;
+    border-radius: 10px;
+    border: none;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #252525;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.submit-btn:hover{
+    background-color: #ffff00bc;
+    color: #fff;
+}
+
+.line{
+
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 1px;
+    width: 50vh;
+    border: none;
+    background-color: #ffffff;
+    border: 0px solid rgba(255, 255, 255, 0.5);
+    
+}
+
+.anc{
+    text-decoration: none;
+    color: #ffff00bc;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 45%;
+    padding: 0;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+}

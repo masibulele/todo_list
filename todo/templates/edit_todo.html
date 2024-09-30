@@ -1,0 +1,54 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Font Awesome 5 Brands:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/index.css'%}">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="signup-container">
+            <div>
+                <h1>Hello {{user}}</h1>
+            </div>
+            <form  class="" method="post" autocomplete="false">
+                {%csrf_token%}
+                <div class="field">
+                    <b class="heading">Get things done</b>
+                </div>
+                <a href="" class="sign"><i
+                    class="fa-solid fa-right-from-bracket"></i></a>
+                <div class="line"></div>
+                <div class="field">
+                    <input type="text" class="inp" placeholder="Enter today's task" required name="title" autocomplete="off" value="{{obj.title}}">
+                    <input class="submit-btn" type="submit" value="edit Task">
+                </div>
+                <div class="line"></div>
+                <div class="src">
+                    {% for todo in res %}
+
+                        <div class="todo">
+                            <h5>{{todo.srno}}</h5>
+                            <p>{{todo.title}}</p>
+                            <div>
+                                <a href="{% url 'edit_todo' todo.srno %}" class="todo-btn"><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href="" class="todo-btn"><i class="fa-solid fa-trash"></i></a>
+                            </div>
+                        </div>
+                    {%endfor%}  
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
